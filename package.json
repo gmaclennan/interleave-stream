@@ -1,0 +1,35 @@
+{
+  "name": "interleave-stream",
+  "version": "1.0.0",
+  "description": "Interleave multiple input streams into a single stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "keywords": [
+    "streams",
+    "interleave",
+    "multiple"
+  ],
+  "author": "Gregor MacLennan",
+  "license": "MIT",
+  "dependencies": {
+    "flush-write-stream": "^1.0.2",
+    "from2": "^2.3.0",
+    "once": "^1.4.0"
+  },
+  "devDependencies": {
+    "callback-stream": "^1.1.0",
+    "from2-array": "0.0.4",
+    "split2": "^2.1.1",
+    "tape": "^4.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmaclennan/interleave-stream.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gmaclennan/interleave-stream/issues"
+  },
+  "homepage": "https://github.com/gmaclennan/interleave-stream#readme"
+}
