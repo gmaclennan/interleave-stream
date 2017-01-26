@@ -29,9 +29,14 @@ function interleave (streams, opts) {
 
   streams.forEach(function (stream, i) {
     stream.pipe(collector(i))
+      .on('error', onError)
   })
 
   return readable
+
+  function onError (err) {
+    readable.emit('error', err)
+  }
 
   function collector (i) {
     return to(opts, write, flush)
@@ -45,8 +50,7 @@ function interleave (streams, opts) {
           next()
         } else {
           emitter.once('thirsty', function () {
-            console.log('THIRST', arguments)
-            next
+            next()
           })
         }
       } else {
