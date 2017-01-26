@@ -1,6 +1,6 @@
 {
   "name": "interleave-stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interleave multiple input streams into a single stream",
   "main": "index.js",
   "scripts": {
