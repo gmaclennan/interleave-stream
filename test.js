@@ -52,3 +52,17 @@ test('object mode', function (t) {
     t.end()
   }))
 })
+
+test('hwm object mode', function (t) {
+  var o1 = Array(40).fill(0)
+  var o2 = Array(40).fill(1)
+  var expected = Array(80).fill(null).map(function (v, i) {
+    return i % 2
+  })
+  interleave.obj([from.obj(o1), from.obj(o2)]).pipe(callback.obj(function (err, data) {
+    t.error(err)
+    t.deepEqual(data, expected)
+    t.end()
+  }))
+})
+
