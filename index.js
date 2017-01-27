@@ -61,7 +61,6 @@ function interleave (streams, opts) {
     }
 
     function flush (cb) {
-      wanted = (wanted + 1) % streams.length
       pending--
       emitter.emit('data')
       cb()
